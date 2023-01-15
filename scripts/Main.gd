@@ -43,13 +43,16 @@ func _on_AsteroidTimer_timeout():
 	
 	var asteroid_spawn_location = get_node("AsteroidPath/AsteroidSpawnLocation")
 	asteroid_spawn_location.offset = randi()
-	
-	var direction = asteroid_spawn_location.rotation + PI / 2
 	asteroid.position = asteroid_spawn_location.position
-	direction += rand_range(-PI / 4, PI / 4)
-	asteroid.rotation = direction
 	
-	var velocity = Vector2(rand_range(150.0, 250.0), 0.0)
-	asteroid.linear_velocity = velocity.rotated(direction)
+	var velocity = Vector2(0, rand_range(75.0, 150.0))
+	asteroid.linear_velocity = velocity
+	
+	var scaleRatio = rand_range(0.7, 1.5)
+	var scale = Vector2(scaleRatio, scaleRatio)
+	asteroid.scale = scale
+	
+	var rotation = rand_range(0, PI)
+	asteroid.rotation = rotation
 	
 	add_child(asteroid)
