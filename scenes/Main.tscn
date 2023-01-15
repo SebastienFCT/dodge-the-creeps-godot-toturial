@@ -28,7 +28,7 @@ func _process(delta):
 
 [sub_resource type="Curve2D" id=5]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, 363, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 1, 0, 0, 0, 0, 480, 363 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 481, 1 )
 }
 
 [node name="Main" type="Node"]
@@ -87,6 +87,7 @@ stream = ExtResource( 5 )
 curve = SubResource( 5 )
 
 [node name="AsteroidSpawnLocation" type="PathFollow2D" parent="AsteroidPath"]
+rotation = 0.002079
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_AsteroidTimer_timeout"]
