@@ -1,11 +1,14 @@
 extends Node
 
-export(PackedScene) var asteroid_scene
+export(PackedScene) var asteroid_factory_scene
+
+var asteroid_factory
 var score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	asteroid_factory = asteroid_factory_scene.instance()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -36,7 +39,7 @@ func _on_ScoreTimer_timeout():
 	$HUD.update_score(score)
 
 func _on_AsteroidTimer_timeout():
-	var asteroid = asteroid_scene.instance()
+	var asteroid = asteroid_factory.generate_random()
 	
 	var asteroid_spawn_location = get_node("AsteroidPath/AsteroidSpawnLocation")
 	asteroid_spawn_location.offset = randi()
