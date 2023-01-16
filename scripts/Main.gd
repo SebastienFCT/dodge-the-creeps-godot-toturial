@@ -40,6 +40,7 @@ func _on_ScoreTimer_timeout():
 
 func _on_AsteroidTimer_timeout():
 	var asteroid = asteroid_factory.generate_random()
+	#var asteroid = asteroid_factory.generate(0)
 	
 	var asteroid_spawn_location = get_node("AsteroidPath/AsteroidSpawnLocation")
 	asteroid_spawn_location.offset = randi()
@@ -54,5 +55,7 @@ func _on_AsteroidTimer_timeout():
 	
 	var rotation = rand_range(0, PI)
 	asteroid.rotation = rotation
+	
+	asteroid.add_to_group(Global.GAME_GROUPS.ASTEROIDS)
 	
 	add_child(asteroid)
