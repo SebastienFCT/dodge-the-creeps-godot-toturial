@@ -1,14 +1,17 @@
 extends Area2D
 signal hit
 
+export(PackedScene) var ammo_factory_scene
+var ammo_factory
+
 export var speed = 400
 var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ammo_factory = ammo_factory_scene.instance()
 	screen_size = get_viewport_rect().size
 	hide()
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -36,11 +39,18 @@ func _process(delta):
 
 
 func _on_Player_body_entered(body):
-	hide()
-	emit_signal("hit")
-	$CollisionShape2D.set_deferred("disabled", true)
+	if (!body.is_in_group(Global.GAME_GROUPS.PLAYER_AMMO)):
+		hide()
+		emit_signal("hit")
+		$CollisionShape2D.set_deferred("disabled", true)
 	
 func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+
+func _on_BaseAmmoTimer_timeout():
+	var ammo = ammo_factory.generate_ammo(Global.AMMO_TYPES.BASE)
+	ammo.position = self.position
+	ammo.add_to_group(Global.GAME_GROUPS.PLAYER_AMMO)
+	get_parent().add_child(ammo)
