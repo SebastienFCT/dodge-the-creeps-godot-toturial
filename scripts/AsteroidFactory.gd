@@ -1,6 +1,6 @@
 extends Node
 
-func generate_asteroid(index):
+func generate(index):
 	return get_child(index).duplicate()
 
 func generate_random():
