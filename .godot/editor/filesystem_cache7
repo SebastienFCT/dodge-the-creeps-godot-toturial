@@ -1,12 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1673919832
+::res://::1673922790
 default_env.tres::Environment::-1::1673919708::0::1::::<><>::
 icon.png::CompressedTexture2D::2443015608785559158::1673733413::1673919834::1::::<><>::
 README.md::TextFile::-1::1673733474::0::1::::<><>::
-::res://art/::1673919834
-gameover.wav::AudioStreamWAV::6194029391051966467::1503176804::1673919834::1::::<><>::
-House In a Forest Loop.ogg::AudioStreamOggVorbis::151415653278579501::1503176804::1673919834::1::::<><>::
-::res://art/asteroids/::1673789254
+::res://art/::1673922764
+::res://art/asteroids/::1673919834
 asteroid_1.png::CompressedTexture2D::2521021372456371627::1673789251::1673919834::1::::<><>::
 asteroid_2.png::CompressedTexture2D::6585074655437673365::1673789251::1673919834::1::::<><>::
 asteroid_3.png::CompressedTexture2D::5817791611492372670::1673789251::1673919834::1::::<><>::
@@ -19,11 +17,11 @@ asteroid_9.png::CompressedTexture2D::6501777467828650591::1673789251::1673919834
 asteroid_10.png::CompressedTexture2D::8012889660412502020::1673789251::1673919834::1::::<><>::
 asteroid_11.png::CompressedTexture2D::1662057895031079637::1673789251::1673919834::1::::<><>::
 asteroid_12.png::CompressedTexture2D::2307371144060848306::1673789251::1673919834::1::::<><>::
-::res://art/parallax/::1673756415
+::res://art/parallax/::1673919834
 background.png::CompressedTexture2D::963062721534181264::1673752620::1673919834::1::::<><>::
 stars_1.png::CompressedTexture2D::4823379438614665829::1673752613::1673919834::1::::<><>::
 stars_2.png::CompressedTexture2D::4952046339668065437::1673752805::1673919834::1::::<><>::
-::res://art/player/::1673756398
+::res://art/player/::1673919834
 player_1.png::CompressedTexture2D::6563221150355126398::1673755003::1673919834::1::::<><>::
 player_2.png::CompressedTexture2D::1577262681151919206::1673755003::1673919834::1::::<><>::
 player_3.png::CompressedTexture2D::1157146784019443540::1673755003::1673919834::1::::<><>::
@@ -31,23 +29,36 @@ player_boost_1.png::CompressedTexture2D::4800257332362022886::1673755003::167391
 player_boost_2.png::CompressedTexture2D::1019989597948374163::1673755003::1673919834::1::::<><>::
 player_boost_3.png::CompressedTexture2D::6608163350045551768::1673755003::1673919834::1::::<><>::
 ::res://art/src/::1673756029
-::res://fonts/::1505414566
+::res://audio/::1673922790
+Alone Against Enemy.ogg::AudioStreamOggVorbis::211586246557530695::1673922790::1673922790::1::::<><>::
+Battle in the Stars.ogg::AudioStreamOggVorbis::3160585210147940103::1673922790::1673922790::1::::<><>::
+Brave Pilots (Menu Screen).ogg::AudioStreamOggVorbis::8592941705104121900::1673922790::1673922790::1::::<><>::
+DeathMatch (Boss Theme).ogg::AudioStreamOggVorbis::6105364088831655295::1673922790::1673922790::1::::<><>::
+Defeated (Game Over Tune).ogg::AudioStreamOggVorbis::4602177757925586987::1673922790::1673922790::1::::<><>::
+Epic End.ogg::AudioStreamOggVorbis::7982124212533597678::1673922790::1673922790::1::::<><>::
+licenses.txt::TextFile::-1::1673922790::0::1::::<><>::
+Rain of Lasers.ogg::AudioStreamOggVorbis::4402362641208569109::1673922790::1673922790::1::::<><>::
+SkyFire (Title Screen).ogg::AudioStreamOggVorbis::452242655183786022::1673922790::1673922790::1::::<><>::
+Space Heroes.ogg::AudioStreamOggVorbis::341492649304905433::1673922790::1673922790::1::::<><>::
+Victory Tune.ogg::AudioStreamOggVorbis::4984125967899439644::1673922790::1673922790::1::::<><>::
+Without Fear.ogg::AudioStreamOggVorbis::5766283352097126113::1673922790::1673922790::1::::<><>::
+::res://fonts/::1673919834
 FONTLOG.txt::TextFile::-1::1503176804::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1503176804::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::2230713078023769532::1503176804::1673919834::1::::<><>::
-::res://scenes/::1673912103
+::res://scenes/::1673922308
 AmmoFactory.tscn::PackedScene::-1::1673919708::0::1::::<><>::res://scripts/AmmoFactory.gd<>res://scripts/PlayerBaseAmmo.gd
 AsteroidFactory.tscn::PackedScene::-1::1673919708::0::1::::<><>::res://scripts/AsteroidFactory.gd<>res://art/asteroids/asteroid_9.png<>res://art/asteroids/asteroid_1.png<>res://art/asteroids/asteroid_5.png<>res://scripts/Asteroid.gd<>res://art/asteroids/asteroid_3.png<>res://art/asteroids/asteroid_2.png<>res://art/asteroids/asteroid_6.png<>res://art/asteroids/asteroid_10.png<>res://art/asteroids/asteroid_7.png<>res://art/asteroids/asteroid_11.png<>res://art/asteroids/asteroid_4.png<>res://art/asteroids/asteroid_8.png<>res://art/asteroids/asteroid_12.png
-HUD.tscn::PackedScene::-1::1673919708::0::1::::<><>::res://fonts/Xolonium-Regular.ttf<>res://scripts/HUD.gd
-Main.tscn::PackedScene::-1::1673919708::0::1::::<><>::res://scenes/Player.tscn<>res://scripts/Main.gd<>res://scenes/AsteroidFactory.tscn<>res://scenes/HUD.tscn<>res://art/gameover.wav<>res://art/House In a Forest Loop.ogg<>res://art/parallax/background.png<>res://art/parallax/stars_1.png<>res://art/parallax/stars_2.png
+HUD.tscn::PackedScene::6058290578632896557::1673922308::0::1::::<><>::uid://61trvmqs6roe<>res://scripts/HUD.gd
+Main.tscn::PackedScene::2907961292320732583::1673922308::0::1::::<><>::res://scenes/Player.tscn<>res://scripts/Main.gd<>res://scenes/AsteroidFactory.tscn<>uid://cskxfp1i4ylov<>uid://cuio02sefxvqh<>uid://cfl18rdbj2cf<>uid://nyrrcxehpvxg<>uid://cayqmb8e2e14t<>uid://ccs2qkstqxi8d
 Player.tscn::PackedScene::-1::1673919708::0::1::::<><>::res://scenes/AmmoFactory.tscn<>res://scripts/Player.gd<>res://art/player/player_1.png<>res://art/player/player_2.png<>res://art/player/player_3.png<>res://art/player/player_boost_1.png<>res://art/player/player_boost_2.png<>res://art/player/player_boost_3.png
-::res://scripts/::1673833895
+::res://scripts/::1673921748
 Ammo.gd::GDScript::-1::1673919708::0::1::::<>Area2D<>::
 AmmoFactory.gd::GDScript::-1::1673919708::0::1::::<>Node<>::
 Asteroid.gd::GDScript::-1::1673919708::0::1::::<>RigidBody2D<>::
 AsteroidFactory.gd::GDScript::-1::1673919708::0::1::::<>Node<>::
 Global.gd::GDScript::-1::1673919708::0::1::::Global<>RefCounted<>::
 HUD.gd::GDScript::-1::1673919708::0::1::::<>CanvasLayer<>::
-Main.gd::GDScript::-1::1673919708::0::1::::<>Node<>::
-Player.gd::GDScript::-1::1673919708::0::1::::<>Area2D<>::
+Main.gd::GDScript::-1::1673920717::0::1::::<>Node<>::
+Player.gd::GDScript::-1::1673921748::0::1::::<>Area2D<>::
 PlayerBaseAmmo.gd::GDScript::-1::1673919708::0::1::::<>Area2D<>::

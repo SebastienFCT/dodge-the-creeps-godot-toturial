@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gpcmuips7tcw"
+path="res://.godot/imported/SkyFire (Title Screen).ogg-5a10206083e3ddd5f98753770db4b74f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/SkyFire (Title Screen).ogg"
+dest_files=["res://.godot/imported/SkyFire (Title Screen).ogg-5a10206083e3ddd5f98753770db4b74f.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
