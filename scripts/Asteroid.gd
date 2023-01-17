@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-export var health = 10
+@export var health = 10
 
 func _ready():
 	pass # Replace with function body.

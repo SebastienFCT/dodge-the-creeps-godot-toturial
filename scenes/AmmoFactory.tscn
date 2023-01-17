@@ -14,11 +14,11 @@ script = ExtResource( 2 )
 speed = 200.0
 
 [node name="ColorRect" type="ColorRect" parent="PlayerBaseAmmo"]
-margin_right = 1.0
-margin_bottom = 4.0
+offset_right = 1.0
+offset_bottom = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBaseAmmo"]
 position = Vector2( 0.5, 2 )
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="PlayerBaseAmmo"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="PlayerBaseAmmo"]

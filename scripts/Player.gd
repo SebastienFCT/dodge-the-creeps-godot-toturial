@@ -1,15 +1,15 @@
 extends Area2D
 signal hit
 
-export(PackedScene) var ammo_factory_scene
+@export var ammo_factory_scene: PackedScene
 var ammo_factory
 
-export var speed = 400
+@export var speed = 400
 var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ammo_factory = ammo_factory_scene.instance()
+	ammo_factory = ammo_factory_scene.instantiate()
 	screen_size = get_viewport_rect().size
 	hide()
 
@@ -33,9 +33,9 @@ func _process(delta):
 	position.y = clamp(position.y, 0, screen_size.y)
 		
 	if velocity.y > 0:
-		$AnimatedSprite.animation = "boost"
+		$AnimatedSprite2D.animation = "boost"
 	else:
-		$AnimatedSprite.animation = "slow"
+		$AnimatedSprite2D.animation = "slow"
 
 
 func _on_Player_body_entered(body):

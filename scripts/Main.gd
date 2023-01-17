@@ -1,6 +1,6 @@
 extends Node
 
-export(PackedScene) var asteroid_factory_scene
+@export var asteroid_factory_scene: PackedScene
 
 var asteroid_factory
 var score
@@ -8,7 +8,7 @@ var score
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	asteroid_factory = asteroid_factory_scene.instance()
+	asteroid_factory = asteroid_factory_scene.instantiate()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,17 +43,17 @@ func _on_AsteroidTimer_timeout():
 	#var asteroid = asteroid_factory.generate(0)
 	
 	var asteroid_spawn_location = get_node("AsteroidPath/AsteroidSpawnLocation")
-	asteroid_spawn_location.offset = randi()
+	asteroid_spawn_location.progress = randi()
 	asteroid.position = asteroid_spawn_location.position
 	
-	var velocity = Vector2(0, rand_range(75.0, 150.0))
+	var velocity = Vector2(0, randf_range(75.0, 150.0))
 	asteroid.linear_velocity = velocity
 	
-	var scaleRatio = rand_range(0.7, 1.5)
+	var scaleRatio = randf_range(0.7, 1.5)
 	var scale = Vector2(scaleRatio, scaleRatio)
 	asteroid.scale = scale
 	
-	var rotation = rand_range(0, PI)
+	var rotation = randf_range(0, PI)
 	asteroid.rotation = rotation
 	
 	asteroid.add_to_group(Global.GAME_GROUPS.ASTEROIDS)

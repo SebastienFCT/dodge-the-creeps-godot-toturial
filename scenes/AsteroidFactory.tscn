@@ -1,19 +1,19 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scripts/AsteroidFactory.gd" type="Script" id=1]
-[ext_resource path="res://art/asteroids/asteroid_9.png" type="Texture" id=2]
-[ext_resource path="res://art/asteroids/asteroid_1.png" type="Texture" id=3]
-[ext_resource path="res://art/asteroids/asteroid_5.png" type="Texture" id=4]
+[ext_resource path="res://art/asteroids/asteroid_9.png" type="Texture2D" id=2]
+[ext_resource path="res://art/asteroids/asteroid_1.png" type="Texture2D" id=3]
+[ext_resource path="res://art/asteroids/asteroid_5.png" type="Texture2D" id=4]
 [ext_resource path="res://scripts/Asteroid.gd" type="Script" id=5]
-[ext_resource path="res://art/asteroids/asteroid_3.png" type="Texture" id=6]
-[ext_resource path="res://art/asteroids/asteroid_2.png" type="Texture" id=7]
-[ext_resource path="res://art/asteroids/asteroid_6.png" type="Texture" id=8]
-[ext_resource path="res://art/asteroids/asteroid_10.png" type="Texture" id=9]
-[ext_resource path="res://art/asteroids/asteroid_7.png" type="Texture" id=10]
-[ext_resource path="res://art/asteroids/asteroid_11.png" type="Texture" id=11]
-[ext_resource path="res://art/asteroids/asteroid_4.png" type="Texture" id=12]
-[ext_resource path="res://art/asteroids/asteroid_8.png" type="Texture" id=13]
-[ext_resource path="res://art/asteroids/asteroid_12.png" type="Texture" id=14]
+[ext_resource path="res://art/asteroids/asteroid_3.png" type="Texture2D" id=6]
+[ext_resource path="res://art/asteroids/asteroid_2.png" type="Texture2D" id=7]
+[ext_resource path="res://art/asteroids/asteroid_6.png" type="Texture2D" id=8]
+[ext_resource path="res://art/asteroids/asteroid_10.png" type="Texture2D" id=9]
+[ext_resource path="res://art/asteroids/asteroid_7.png" type="Texture2D" id=10]
+[ext_resource path="res://art/asteroids/asteroid_11.png" type="Texture2D" id=11]
+[ext_resource path="res://art/asteroids/asteroid_4.png" type="Texture2D" id=12]
+[ext_resource path="res://art/asteroids/asteroid_8.png" type="Texture2D" id=13]
+[ext_resource path="res://art/asteroids/asteroid_12.png" type="Texture2D" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 29.0
@@ -39,13 +39,13 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 15
 
-[node name="Sprite" type="Sprite" parent="Asteroid1"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid1"]
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid1"]
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid1"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid1"]
 
 [node name="Asteroid2" type="RigidBody2D" parent="."]
 position = Vector2( 91, 0 )
@@ -54,13 +54,13 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 15
 
-[node name="Sprite" type="Sprite" parent="Asteroid2"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid2"]
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid2"]
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid2"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid2"]
 
 [node name="Asteroid3" type="RigidBody2D" parent="."]
 position = Vector2( 185, 0 )
@@ -69,13 +69,13 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 15
 
-[node name="Sprite" type="Sprite" parent="Asteroid3"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid3"]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid3"]
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid3"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid3"]
 
 [node name="Asteroid4" type="RigidBody2D" parent="."]
 position = Vector2( 1, 94 )
@@ -83,10 +83,10 @@ collision_mask = 4
 gravity_scale = 0.0
 script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Asteroid4"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid4"]
 texture = ExtResource( 7 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid4"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid4"]
 shape = SubResource( 2 )
@@ -97,10 +97,10 @@ collision_mask = 4
 gravity_scale = 0.0
 script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Asteroid5"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid5"]
 texture = ExtResource( 8 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid5"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid5"]
 shape = SubResource( 2 )
@@ -111,10 +111,10 @@ collision_mask = 4
 gravity_scale = 0.0
 script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Asteroid6"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid6"]
 texture = ExtResource( 9 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid6"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid6"]
 shape = SubResource( 2 )
@@ -126,10 +126,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 7
 
-[node name="Sprite" type="Sprite" parent="Asteroid7"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid7"]
 texture = ExtResource( 6 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid7"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid7"]
 position = Vector2( 0, 1 )
@@ -143,10 +143,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 7
 
-[node name="Sprite" type="Sprite" parent="Asteroid8"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid8"]
 texture = ExtResource( 10 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid8"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid8"]
 position = Vector2( 0, 1 )
@@ -160,10 +160,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 7
 
-[node name="Sprite" type="Sprite" parent="Asteroid9"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid9"]
 texture = ExtResource( 11 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid9"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid9"]
 position = Vector2( 0, 1 )
@@ -177,10 +177,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 5
 
-[node name="Sprite" type="Sprite" parent="Asteroid10"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid10"]
 texture = ExtResource( 12 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid10"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid10"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid10"]
 position = Vector2( 0, 1 )
@@ -194,10 +194,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 5
 
-[node name="Sprite" type="Sprite" parent="Asteroid11"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid11"]
 texture = ExtResource( 13 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid11"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid11"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid11"]
 position = Vector2( 0, 1 )
@@ -211,10 +211,10 @@ gravity_scale = 0.0
 script = ExtResource( 5 )
 health = 5
 
-[node name="Sprite" type="Sprite" parent="Asteroid12"]
+[node name="Sprite2D" type="Sprite2D" parent="Asteroid12"]
 texture = ExtResource( 14 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Asteroid12"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Asteroid12"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid12"]
 position = Vector2( 0, 1 )

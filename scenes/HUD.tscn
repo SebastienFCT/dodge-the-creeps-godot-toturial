@@ -1,50 +1,58 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://cskxfp1i4ylov"]
 
-[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/HUD.gd" type="Script" id=2]
+[ext_resource type="FontFile" uid="uid://61trvmqs6roe" path="res://fonts/Xolonium-Regular.ttf" id="1"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="2"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 1 )
+[sub_resource type="InputEventKey" id="InputEventKey_onvgc"]
+keycode = 4194309
 
-[sub_resource type="InputEventAction" id=4]
-action = "start_game"
+[sub_resource type="InputEventKey" id="InputEventKey_0bnjb"]
+keycode = 32
 
-[sub_resource type="ShortCut" id=3]
-shortcut = SubResource( 4 )
+[sub_resource type="Shortcut" id="3"]
+events = [SubResource("InputEventKey_onvgc"), SubResource("InputEventKey_0bnjb")]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 10
 anchor_right = 1.0
-margin_bottom = 78.0
-custom_fonts/font = SubResource( 1 )
+offset_top = 20.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 29
 text = "0"
-align = 1
+horizontal_alignment = 1
 
 [node name="Message" type="Label" parent="."]
+anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -39.0
-margin_bottom = 39.0
-custom_fonts/font = SubResource( 1 )
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 35
 text = "Back Home"
-align = 1
-autowrap = true
+horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="."]
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -90.0
-margin_top = -200.0
-margin_right = 90.0
-margin_bottom = -100.0
-custom_fonts/font = SubResource( 1 )
-shortcut = SubResource( 3 )
+offset_left = -90.0
+offset_top = -200.0
+offset_right = 90.0
+offset_bottom = -100.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 34
+shortcut = SubResource("3")
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="."]
