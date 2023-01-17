@@ -92,7 +92,6 @@ stream = ExtResource("9_lwrtv")
 curve = SubResource("5")
 
 [node name="AsteroidSpawnLocation" type="PathFollow2D" parent="AsteroidPath"]
-rotation = 0.002079
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_AsteroidTimer_timeout"]
